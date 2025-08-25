@@ -17,13 +17,18 @@ def main():
 
 if __name__ == "__main__":
     main()
-elif choice == "2":
-            if not tasks:
-                print("No tasks yet!")
-            else:
+elif choice == "3":
+        if not tasks:
+                print("No tasks to mark!")
+        else:
                 for i, t in enumerate(tasks, start=1):
                     status = "Done" if t["done"] else "Pending"
                     print(f"{i}. {t['task']} [{status}]")
+                num = int(input("Enter task number to mark done: "))
+                if 1 <= num <= len(tasks):
+                    tasks[num-1]["done"] = True
+                    print(f'Task "{tasks[num-1]["task"]}" marked as done!')
+
 
 
 
