@@ -17,9 +17,13 @@ def main():
 
 if __name__ == "__main__":
     main()
-elif choice == "1":
-            task = input("Enter a new task: ")
-            tasks.append({"task": task, "done": False})
-            print(f'Task "{task}" added!')
+elif choice == "2":
+            if not tasks:
+                print("No tasks yet!")
+            else:
+                for i, t in enumerate(tasks, start=1):
+                    status = "Done" if t["done"] else "Pending"
+                    print(f"{i}. {t['task']} [{status}]")
+
 
 
