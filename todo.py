@@ -17,4 +17,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+elif choice == "1":
+            task = input("Enter a new task: ")
+            tasks.append({"task": task, "done": False})
+            print(f'Task "{task}" added!')
+
 
